@@ -1,0 +1,68 @@
+ionic cordova run android -cs
+ionic build
+ionic serve
+
+ionic start speechtest001 blank
+
+npm install --save @ionic-native/speech-recognition
+ionic cordova plugin add cordova-plugin-speechrecognition
+
+npm install -g cordova ionic
+ionic cordova platform add android
+
+
+
+
+
+
+
+
+
+
+exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'app', 'src', 'main', 'assets', 'www');
+
+
+exports.ANDROID_PLATFORM_PATH = path.join('platforms', 'android', 'assets', 'www');
+
+---------------------------
+
+ionic cordova plugin add cordova-plugin-tts
+npm install --save @ionic-native/text-to-speech
+
+
+import {TextToSpeech} from 'ionic-native';
+
+const options = {
+    	text: "hi, how are you",
+        rate: 1.55
+    }
+
+TextToSpeech.speak(options)
+    .then(() => console.log('Success'))
+    .catch((reason: any) => console.log(reason));
+    
+-------------
+
+console.log('matches : ' + matches);
+          for (let entry of matches) {
+            console.log(entry); // 1, "string", false
+          }
+          
+          
+import { TextToSpeech } from '@ionic-native/text-to-speech';
+
+import {TextToSpeech} from '@ionic-native/text-to-speech';
+
+ playText() {
+    this.tts.speak({
+      text: this.text,
+      rate: this.rate / 10,
+      locale: this.locale
+    })
+      .then(() => console.log('Success'))
+      .catch((reason: any) => console.log(reason));
+  }
+  
+  
+  String.prototype.replace("what", "how")
+  
